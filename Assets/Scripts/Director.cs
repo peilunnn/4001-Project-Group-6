@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public enum ObjectType {
+public enum ObjectType
+{
     NONE,
     LEFT_TREE,
     CENTRE_TREE,
@@ -13,19 +14,22 @@ public enum ObjectType {
     INVINCI,
 }
 
-enum CameraType {
+enum CameraType
+{
     FOLLOW,
     BIRD,
     TPS,
 }
 
-public enum Difficulty {
+public enum Difficulty
+{
     EASY,
     MED,
     HARD,
 }
 
-public class Director : MonoBehaviour {
+public class Director : MonoBehaviour
+{
     private int coinsCollected;
     private int blocksCleared;
     public GameObject rampObject;
@@ -60,14 +64,16 @@ public class Director : MonoBehaviour {
     private int coinScore = 100;
     private int distScore = 1000;
 
-    public enum Mode {
+    public enum Mode
+    {
         NORMAL,
         TRANSITION,
         INVINCIBLE_MODE,
         TRANSITION_BACK,
     }
 
-    void Start() {
+    void Start()
+    {
         // intialize reference to components
         cameraTransform = cameraObject.GetComponent<Transform>();
         particleTransform = particleObject.GetComponent<Transform>();
@@ -87,40 +93,49 @@ public class Director : MonoBehaviour {
         SetupScene();
     }
 
-    void Update() {
-        switch (gameMode) {
-            case Mode.NORMAL: {
-                // nothing doing
-                break;
-            }
-            case Mode.TRANSITION: {
-                transitionElapsed += Time.deltaTime / transitionTime;
-                cameraTransform.rotation = Quaternion.Slerp(cameraStart, cameraEnd, transitionElapsed);
-                particleTransform.rotation = Quaternion.Slerp(cameraStart, cameraEnd, transitionElapsed);
-                if (transitionElapsed >= 1f) {
-                    gameMode = Mode.INVINCIBLE_MODE;
-                    transitionElapsed = 0f;
+    void Update()
+    {
+        switch (gameMode)
+        {
+            case Mode.NORMAL:
+                {
+                    // nothing doing
+                    break;
                 }
-                break;
-            }
-            case Mode.INVINCIBLE_MODE: {
-                // nothing doing for now
-                break;
-            }
-            case Mode.TRANSITION_BACK: {
-                transitionElapsed = transitionElapsed + Time.deltaTime / transitionTime;
-                cameraTransform.rotation = Quaternion.Slerp(cameraEnd, cameraStart, transitionElapsed);
-                particleTransform.rotation = Quaternion.Slerp(cameraStart, cameraEnd, transitionElapsed);
-                if (transitionElapsed >= 1f) {
-                    gameMode = Mode.NORMAL;
-                    transitionElapsed = 0f;
+            case Mode.TRANSITION:
+                {
+                    transitionElapsed += Time.deltaTime / transitionTime;
+                    cameraTransform.rotation = Quaternion.Slerp(cameraStart, cameraEnd, transitionElapsed);
+                    particleTransform.rotation = Quaternion.Slerp(cameraStart, cameraEnd, transitionElapsed);
+                    if (transitionElapsed >= 1f)
+                    {
+                        gameMode = Mode.INVINCIBLE_MODE;
+                        transitionElapsed = 0f;
+                    }
+                    break;
                 }
-                break;
-            }
+            case Mode.INVINCIBLE_MODE:
+                {
+                    // nothing doing for now
+                    break;
+                }
+            case Mode.TRANSITION_BACK:
+                {
+                    transitionElapsed = transitionElapsed + Time.deltaTime / transitionTime;
+                    cameraTransform.rotation = Quaternion.Slerp(cameraEnd, cameraStart, transitionElapsed);
+                    particleTransform.rotation = Quaternion.Slerp(cameraStart, cameraEnd, transitionElapsed);
+                    if (transitionElapsed >= 1f)
+                    {
+                        gameMode = Mode.NORMAL;
+                        transitionElapsed = 0f;
+                    }
+                    break;
+                }
         }
     }
 
-    public void SetupScene() {
+    public void SetupScene()
+    {
         // update counts
         coinsCollected = 0;
         blocksCleared = 0;
@@ -134,17 +149,17 @@ public class Director : MonoBehaviour {
 
         // reset path generator
         pathGenerator.SetupRamp(rampObject);
-        while (pathGenerator.pathQueue.Peek() == null) {
+        while (pathGenerator.pathQueue.Peek() == null)
+        {
             AddNewBlock();
         }
 
         // setup character
         ragDollObject.SetActive(false);
         characterObject.transform.position = new Vector3(2, 0, 1);
-        characterObject.transform.rotation = Quaternion.identity;
+        characterObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         characterObject.GetComponent<CapsuleCollider>().height = 1.8f;
         characterObject.GetComponent<CapsuleCollider>().center = new Vector3(0, 0.9f, 0);
-        characterObject.GetComponent<Animator>().Play("Idle", 0);
         characterObject.SetActive(true);
 
         // set UI panel to start
@@ -154,19 +169,21 @@ public class Director : MonoBehaviour {
         ChangeCamera(CameraType.TPS);
     }
 
-    public void InScene() {
+    public void InScene()
+    {
         uILogic.SetPanelActive(Panel.IN);
         // change nums
         ChangeCamera(CameraType.FOLLOW);
-        characterObject.GetComponent<Animator>().SetTrigger("RunTrigger");
     }
 
-    public void EndScene() {
+    public void EndScene()
+    {
         highScore = (highScore < score) ? score : highScore;
         StartCoroutine(EndSceneRoutine());
     }
 
-    IEnumerator EndSceneRoutine() {
+    IEnumerator EndSceneRoutine()
+    {
         ChangeCamera(CameraType.BIRD);
         StartCoroutine(pathGenerator.TearDownRamp());
         uILogic.ChangeBreakdown(coinsCollected, blocksCleared, score);
@@ -176,25 +193,32 @@ public class Director : MonoBehaviour {
         SetupScene();
     }
 
-    public void CollectCoin() {
+    public void CollectCoin()
+    {
         coinsCollected++;
         score += coinScore;
         uILogic.ChangeScore(score);
     }
 
-    public void ClearBlock() {
+    public void ClearBlock()
+    {
         blocksCleared++;
         score += distScore;
         uILogic.ChangeScore(score);
 
         // decide difficulty
         Difficulty level;
-        double ratio = coinsCollected / (double) blocksCleared;
-        if (ratio > 9) {
+        double ratio = coinsCollected / (double)blocksCleared;
+        if (ratio > 9)
+        {
             level = Difficulty.HARD;
-        } else if (ratio > 7) {
+        }
+        else if (ratio > 7)
+        {
             level = Difficulty.MED;
-        } else {
+        }
+        else
+        {
             level = Difficulty.EASY;
         }
 
@@ -204,18 +228,21 @@ public class Director : MonoBehaviour {
         coinGenerator.nextCoins(prefab, prev, level);
     }
 
-    public void AddNewBlock() {
+    public void AddNewBlock()
+    {
         (PathPrefab prefab, PathPrefab prev) = pathGenerator.AddPathBlock();
         obstacleGenerator.nextObstacles(prefab, prev, Difficulty.EASY);
         coinGenerator.nextCoins(prefab, prev, Difficulty.EASY);
     }
 
-    public void TriggerInvincible() {
+    public void TriggerInvincible()
+    {
         transitionElapsed = 0f;
         gameMode = Mode.INVINCIBLE_MODE;
     }
 
-    public void ObstacleCollision(GameObject player) {
+    public void ObstacleCollision(GameObject player)
+    {
         // throw rag doll in place of player
         Rigidbody temprb = player.GetComponent<Rigidbody>();
         Rigidbody ragDollrb = ragDollObject.GetComponent<Rigidbody>();
@@ -227,26 +254,31 @@ public class Director : MonoBehaviour {
         EndScene();
     }
 
-    void ChangeCamera(CameraType type) {
-        switch (type) {
-            case CameraType.FOLLOW: {
-                FollowCameraObject.SetActive(true);
-                BirdCameraObject.SetActive(false);
-                TPSCameraObject.SetActive(false);
-                return;
-            }
-            case CameraType.BIRD: {
-                FollowCameraObject.SetActive(false);
-                BirdCameraObject.SetActive(true);
-                TPSCameraObject.SetActive(false);
-                return;
-            }
-            case CameraType.TPS: {
-                FollowCameraObject.SetActive(false);
-                BirdCameraObject.SetActive(false);
-                TPSCameraObject.SetActive(true);
-                return;
-            }
+    void ChangeCamera(CameraType type)
+    {
+        switch (type)
+        {
+            case CameraType.FOLLOW:
+                {
+                    FollowCameraObject.SetActive(true);
+                    BirdCameraObject.SetActive(false);
+                    TPSCameraObject.SetActive(false);
+                    return;
+                }
+            case CameraType.BIRD:
+                {
+                    FollowCameraObject.SetActive(false);
+                    BirdCameraObject.SetActive(true);
+                    TPSCameraObject.SetActive(false);
+                    return;
+                }
+            case CameraType.TPS:
+                {
+                    FollowCameraObject.SetActive(false);
+                    BirdCameraObject.SetActive(false);
+                    TPSCameraObject.SetActive(true);
+                    return;
+                }
         }
     }
 }

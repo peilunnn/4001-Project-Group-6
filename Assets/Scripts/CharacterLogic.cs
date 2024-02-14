@@ -17,7 +17,6 @@ public class CharacterLogic : MonoBehaviour
     public AudioClip collectSound;
     public AudioClip collideSound;
     public Director director;
-    Animator animator;
     AudioSource audioPlayer;
     public float speed = 6;
     public float nudgeAmount = 0.2f;
@@ -39,18 +38,10 @@ public class CharacterLogic : MonoBehaviour
     void Start()
     {
         currentLane = Lane.CENTRE;
-        animator = this.gameObject.GetComponent<Animator>();
         audioPlayer = this.gameObject.GetComponent<AudioSource>();
         collider = this.gameObject.GetComponent<CapsuleCollider>();
         colliderY = collider.center.y;
         colliderHeight = collider.height;
-        jumpTriggerHash = Animator.StringToHash("JumpTrigger");
-        slideTriggerHash = Animator.StringToHash("SlideTrigger");
-        runState = Animator.StringToHash("Base Layer.Running");
-        jumpState = Animator.StringToHash("Base Layer.Jump");
-        slideState = Animator.StringToHash("Base Layer.RunningSlide");
-        colliderHeightHash = Animator.StringToHash("ColliderHeight");
-        colliderYHash = Animator.StringToHash("ColliderY");
         playerTransform = this.gameObject.transform;
     }
 
@@ -63,84 +54,6 @@ public class CharacterLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
-        if (currentState.fullPathHash == jumpState)
-        {
-            if (!animator.IsInTransition(0))
-            {
-                // change collider position based on parameter
-                collider.center = new Vector3(collider.center.x, colliderY * animator.GetFloat(colliderYHash), collider.center.z);
-            }
-        }
-        else if (currentState.fullPathHash == slideState)
-        {
-            if (!animator.IsInTransition(0))
-            {
-                // change collider height and position
-                float val = animator.GetFloat(colliderHeightHash);
-                collider.height = colliderHeight * val;
-                collider.center = new Vector3(collider.center.x, colliderY * val, collider.center.z);
-            }
-        }
-        else if (currentState.fullPathHash == runState)
-        {
-
-            // set running sound
-            if (!audioPlayer.isPlaying && audioPlayer.clip != runSound)
-            {
-                audioPlayer.clip = runSound;
-                audioPlayer.loop = true;
-                audioPlayer.Play();
-            }
-
-            if (!jumping && Input.GetKeyDown(KeyCode.Space))
-            {
-                jumping = true;
-                animator.SetTrigger(jumpTriggerHash);
-
-                // start playing jump sound
-                PlayOneShot(jumpSound, 0.2f);
-            }
-
-            if (!sliding && Input.GetKeyDown(KeyCode.LeftControl))
-            {
-                sliding = true;
-                animator.SetTrigger(slideTriggerHash);
-
-                // start playing slide sound
-                PlayOneShot(slideSound);
-            }
-        }
-        else
-        {
-            // Idle state
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            playerTransform.Rotate(new Vector3(0, -90, 0), Space.Self);
-        }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            playerTransform.Rotate(new Vector3(0, 90, 0), Space.Self);
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Vector3 nudge = -playerTransform.right * nudgeAmount;
-            playerTransform.Translate(nudge, Space.World);
-            collider.transform.Translate(nudge, Space.World);
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Vector3 nudge = playerTransform.right * nudgeAmount;
-            playerTransform.Translate(nudge, Space.World);
-            collider.transform.Translate(nudge, Space.World);
-        }
-
         // fallen of the edge
         if (playerTransform.position.y < -1.5f)
         {
