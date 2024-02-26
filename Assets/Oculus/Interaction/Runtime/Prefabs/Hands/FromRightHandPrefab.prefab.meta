@@ -1,6 +1,8 @@
 fileFormatVersion: 2
-guid: 8dc6d86603f81b94e9bcc37f204b5dac
-DefaultImporter:
+guid: 827218c3f444cbe4eb2de1343f6b68cf
+labels:
+- oculus_interaction_deprecated
+PrefabImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
