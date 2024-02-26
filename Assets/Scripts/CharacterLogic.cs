@@ -83,11 +83,12 @@ public class CharacterLogic : MonoBehaviour
             other.gameObject.SetActive(false);
             director.CollectCoin();
         }
+        /*
         else if (other.gameObject.CompareTag("Obstacle"))
         {
             PlayOneShot(collideSound);
             director.ObstacleCollision(this.gameObject);
-        }
+        }*/
         else if (other.gameObject.CompareTag("Path End"))
         {
             director.ClearBlock();

@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2364449966134528394, guid: 218850c5c4732986ca45b785d0d15fff,
@@ -15,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 2364449966134528396, guid: 218850c5c4732986ca45b785d0d15fff,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2364449966134528397, guid: 218850c5c4732986ca45b785d0d15fff,
         type: 3}
@@ -35,7 +36,12 @@ PrefabInstance:
     - target: {fileID: 2364449967847544155, guid: 218850c5c4732986ca45b785d0d15fff,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
         type: 3}
@@ -54,6 +60,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -65,16 +76,6 @@ PrefabInstance:
     - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2364449968020225932, guid: 218850c5c4732986ca45b785d0d15fff,
@@ -103,4 +104,7 @@ PrefabInstance:
       value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 218850c5c4732986ca45b785d0d15fff, type: 3}
