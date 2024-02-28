@@ -1059,7 +1059,6 @@ GameObject:
   - component: {fileID: 39977589}
   - component: {fileID: 39977592}
   - component: {fileID: 39977591}
-  - component: {fileID: 39977590}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Untagged
@@ -1082,29 +1081,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &39977590
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39977588}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &39977591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1969,7 +1945,6 @@ GameObject:
   - component: {fileID: 72998693}
   - component: {fileID: 72998696}
   - component: {fileID: 72998695}
-  - component: {fileID: 72998694}
   m_Layer: 0
   m_Name: Pillar (11)
   m_TagString: Untagged
@@ -1992,29 +1967,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &72998694
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72998692}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &72998695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2876,7 +2828,6 @@ GameObject:
   - component: {fileID: 89108211}
   - component: {fileID: 89108214}
   - component: {fileID: 89108213}
-  - component: {fileID: 89108212}
   m_Layer: 0
   m_Name: Pillar (10)
   m_TagString: Untagged
@@ -2899,29 +2850,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &89108212
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89108210}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &89108213
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4955,7 +4883,6 @@ GameObject:
   - component: {fileID: 142681875}
   - component: {fileID: 142681878}
   - component: {fileID: 142681877}
-  - component: {fileID: 142681876}
   m_Layer: 0
   m_Name: Pillar (6)
   m_TagString: Untagged
@@ -4978,29 +4905,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &142681876
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142681874}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &142681877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11752,7 +11656,6 @@ GameObject:
   - component: {fileID: 462709751}
   - component: {fileID: 462709754}
   - component: {fileID: 462709753}
-  - component: {fileID: 462709752}
   m_Layer: 0
   m_Name: Pillar (1)
   m_TagString: Untagged
@@ -11775,29 +11678,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &462709752
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462709750}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &462709753
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12053,7 +11933,6 @@ GameObject:
   - component: {fileID: 473542778}
   - component: {fileID: 473542781}
   - component: {fileID: 473542780}
-  - component: {fileID: 473542779}
   m_Layer: 0
   m_Name: Pillar (13)
   m_TagString: Untagged
@@ -12076,29 +11955,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &473542779
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473542777}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &473542780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12839,7 +12695,6 @@ GameObject:
   - component: {fileID: 507569662}
   - component: {fileID: 507569665}
   - component: {fileID: 507569664}
-  - component: {fileID: 507569663}
   m_Layer: 0
   m_Name: Pillar (4)
   m_TagString: Untagged
@@ -12862,29 +12717,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &507569663
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507569661}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &507569664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13612,7 +13444,6 @@ GameObject:
   - component: {fileID: 549162890}
   - component: {fileID: 549162893}
   - component: {fileID: 549162892}
-  - component: {fileID: 549162891}
   m_Layer: 0
   m_Name: Pillar (15)
   m_TagString: Untagged
@@ -13635,29 +13466,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &549162891
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549162889}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &549162892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18693,7 +18501,6 @@ GameObject:
   - component: {fileID: 812002860}
   - component: {fileID: 812002863}
   - component: {fileID: 812002862}
-  - component: {fileID: 812002861}
   m_Layer: 0
   m_Name: Pillar (14)
   m_TagString: Untagged
@@ -18716,29 +18523,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &812002861
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812002859}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &812002862
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22304,7 +22088,6 @@ GameObject:
   - component: {fileID: 984315737}
   - component: {fileID: 984315740}
   - component: {fileID: 984315739}
-  - component: {fileID: 984315738}
   m_Layer: 0
   m_Name: Pillar (8)
   m_TagString: Untagged
@@ -22327,29 +22110,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &984315738
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984315736}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &984315739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39758,7 +39518,6 @@ GameObject:
   - component: {fileID: 1411677275}
   - component: {fileID: 1411677278}
   - component: {fileID: 1411677277}
-  - component: {fileID: 1411677276}
   m_Layer: 0
   m_Name: Pillar (9)
   m_TagString: Untagged
@@ -39781,29 +39540,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1411677276
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411677274}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1411677277
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45045,7 +44781,6 @@ GameObject:
   - component: {fileID: 1715356730}
   - component: {fileID: 1715356733}
   - component: {fileID: 1715356732}
-  - component: {fileID: 1715356731}
   m_Layer: 0
   m_Name: Pillar (2)
   m_TagString: Untagged
@@ -45068,29 +44803,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1715356731
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715356729}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1715356732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45839,7 +45551,6 @@ GameObject:
   - component: {fileID: 1728468605}
   - component: {fileID: 1728468608}
   - component: {fileID: 1728468607}
-  - component: {fileID: 1728468606}
   m_Layer: 0
   m_Name: Pillar (3)
   m_TagString: Untagged
@@ -45862,29 +45573,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1728468606
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728468604}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1728468607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49052,7 +48740,6 @@ GameObject:
   - component: {fileID: 1883320279}
   - component: {fileID: 1883320282}
   - component: {fileID: 1883320281}
-  - component: {fileID: 1883320280}
   m_Layer: 0
   m_Name: Pillar (7)
   m_TagString: Untagged
@@ -49075,29 +48762,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1883320280
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883320278}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1883320281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50869,7 +50533,6 @@ GameObject:
   - component: {fileID: 2019741799}
   - component: {fileID: 2019741802}
   - component: {fileID: 2019741801}
-  - component: {fileID: 2019741800}
   m_Layer: 0
   m_Name: Pillar (12)
   m_TagString: Untagged
@@ -50892,29 +50555,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2019741800
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019741798}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2019741801
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -53299,7 +52939,6 @@ GameObject:
   - component: {fileID: 2133875957}
   - component: {fileID: 2133875960}
   - component: {fileID: 2133875959}
-  - component: {fileID: 2133875958}
   m_Layer: 0
   m_Name: Pillar (5)
   m_TagString: Untagged
@@ -53322,29 +52961,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075838708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2133875958
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133875956}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2133875959
 MeshRenderer:
   m_ObjectHideFlags: 0
